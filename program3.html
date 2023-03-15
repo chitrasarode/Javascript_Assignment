@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Take two numbers,figure out if the bigger number is divisible by the smaller number</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo"></p>
+
+<script>
+    let x = parseInt(prompt("Enter first number"));
+    let y = parseInt(prompt("Enter second number"));
+
+    document.getElementById("demo1").innerHTML = "First number is : " + x;
+    document.getElementById("demo2").innerHTML = "Second number is : " + y;
+
+    if (x > y) {
+
+        let a = x % y;
+        if(a == 0)
+        {
+            document.getElementById("demo").innerHTML = x + " is fully divisible by " + y;
+        } else {
+            document.getElementById("demo").innerHTML = x + " is not fully divisible by " + y;
+        }
+        
+    } else {
+
+         let a = y % x;
+        if(a == 0)
+        {
+            document.getElementById("demo").innerHTML = y + " is fully divisible by " + x;
+        } else {
+            document.getElementById("demo").innerHTML = y + " is not fully divisible by " + x;
+        }
+    }
+</script>
+
+</body>
+</html>
