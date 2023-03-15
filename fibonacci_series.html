@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Fibonacci series</h2>
+    <p id="demo"></p>
+<script>
+    let x = parseInt(prompt("Enter the number to find fibonacci series."));
+    
+    function fibonacci(x)
+    {
+        let no1=0;
+        let no2=1;
+        let sum;
+        
+        document.getElementById("demo").innerHTML = no1 + ",";
+        document.getElementById("demo").innerHTML += no2;
+        for (let i = 2; i < x; i++) 
+        {
+            sum=no1+no2;
+            no1=no2;
+            no2=sum;
+            document.getElementById("demo").innerHTML += "," + sum;
+        }
+        
+    }
+
+    fibonacci(x);
+    
+</script>
+</body>
+</html>
