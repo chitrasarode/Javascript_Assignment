@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Program to find largest among three numbers.</h2>
+    <p id="demo"></p>
+
+<script>
+    let x = parseFloat(prompt("Enter the first number"));
+    let y = parseFloat(prompt("Enter the second number"));
+    let z = parseFloat(prompt("Enter the third number"));
+
+    let largest;
+
+    if(x == y && x == z){
+        document.getElementById("demo").innerHTML = "All numbers are equal."
+    }
+    else if(x >= y && x >= z)
+    {
+        largest = x;
+        document.getElementById("demo").innerHTML = "Largest number is " + x;
+    }
+    else if(y >= x && y >= z)
+    {
+        largest = y;
+        document.getElementById("demo").innerHTML = "Largest number is " + y;
+    }
+    else{
+        largest = z;
+        document.getElementById("demo").innerHTML = "Largest number is " + z;
+    }
+
+   
+</script>
+</body>
+</html>
