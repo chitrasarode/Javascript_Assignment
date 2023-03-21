@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Program to find factorial of a number</h2>
+    <p id="demo"></p>
+
+<script>
+    let x = parseInt(prompt('Enter a positive integer: '));
+    if (x < 0) {
+        document.getElementById("demo").innerHTML = "Factorial for negative number does not exist.";
+    }
+    else if (x === 0) {
+        document.getElementById("demo").innerHTML = "The factorial of " + x + " is 1.";
+    }
+    else {
+        let fact = 1;
+        for (i = 1; i <= x; i++) {
+            fact *= i;
+        }
+        document.getElementById("demo").innerHTML = "The factorial of " + x + " is " + fact;
+    }
+</script>
+</body>
+</html>
