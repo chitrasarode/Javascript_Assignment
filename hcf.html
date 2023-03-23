@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Program to find the HCF or GCD of two integers</h2>
+    <p id="demo"></p>
+
+<script>
+    let hcf;
+    let num1 = parseInt(prompt('Enter a first positive integer: '));
+    let num2 = parseInt(prompt('Enter a second positive integer: '));
+
+    for (let i = 1; i <= num1 && i <= num2; i++) {
+        if( num1 % i == 0 && num2 % i == 0) {
+            hcf = i;
+        }
+    }
+    document.getElementById("demo").innerHTML = `HCF of ${num1} and ${num2} is ${hcf}.`;
+</script>
+</body>
+</html>
