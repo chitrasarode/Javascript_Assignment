@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Bubble sort Algorithm</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        function bubbleSort(arr) {
+            let i, j;
+            let len = arr.length;
+            let isSwapped = false;
+            for (i = 0; i < len; i++) {
+                isSwapped = false;
+                for (j = 0; j < len; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var temp = arr[j]
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                        isSwapped = true;
+                    }
+                }
+                if (!isSwapped) {
+                    break;
+                }
+            }
+            document.getElementById("demo1").innerHTML = "Array after sorting : " + arr;
+        }
+        let no = parseInt(prompt("Enter number of array element : ")); 
+        let arr = [];
+        for(let x = 0; x < no; x++){
+            arr[x] = parseInt(prompt("Enter array elements :"));
+        }
+        document.getElementById("demo").innerHTML = "Array before sorting : " + arr;
+        bubbleSort(arr);
+        
+    </script>
+</body>
+
+</html>
