@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2></h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        function quicksort(array) {
+            if (array.length <= 1) {
+                return array;
+            } else {
+                let pivot = array[0];
+                let left = [];
+                let right = [];
+                for (let i = 1; i < array.length; i++) {
+                    if (array[i] < pivot) {
+                        left.push(array[i]);
+                    } else {
+                        right.push(array[i]);
+                    }
+                }
+                return quicksort(left).concat(pivot, quicksort(right));
+            }
+        }
+        let arr = [];
+        let n = parseInt(prompt("Enter number of elements in array: "));
+
+        for (let i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Enter array elements"));
+        }
+
+        document.getElementById("demo").innerHTML = "Array before sorting : " + arr;
+        
+        let sortedArray = quicksort(arr);
+        document.getElementById("demo1").innerHTML = "Array after sorting : " + sortedArray;
+
+    </script>
+</body>
+
+</html>
