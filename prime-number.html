@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Program to check prime number</h2>
+    <p id="demo"></p>
+
+<script>
+    let x = parseFloat(prompt("Enter the number "))
+    let isprime = true;
+
+    if (x < 1) {
+        document.getElementById("demo").innerHTML = "The number is not a prime number."
+    }
+    else if (x == 1) {
+        document.getElementById("demo").innerHTML = "1 is neither prime nor composite number."
+    }
+    else{
+        for (let i = 2; i < x; i++) {
+            if(x % i == 0){
+                isprime = false;
+                break;
+            }
+        }
+        if (isprime == true) {
+            document.getElementById("demo").innerHTML = x + " is a prime number."
+        }
+        else{
+            document.getElementById("demo").innerHTML = x + " is not a prime number."
+        }
+    }
+
+</script>
+</body>
+</html>
